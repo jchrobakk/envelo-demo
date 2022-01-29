@@ -8,5 +8,35 @@
 		<link rel="stylesheet" href="./assets/css/reset.css" />
 		<link rel="stylesheet" href="./assets/css/index.css" />
 	</head>
-	<body></body>
+	<body>
+		<section class="box box--visible step-0">
+			<h3 class="box__title">Envelo</h3>
+			<p class="box__text">Możesz mieć swoją przesyłkę w kilka sekund.</p>
+			<p class="box__text">Rozpocznij klikając w przycisk.</p>
+			<button class="box__cta">Odbierz paczkę</button>
+		</section>
+
+		<section class="box step-1">
+			<h3 class="box__title">Envelo</h3>
+			<p class="box__text">Możesz mieć swoją przesyłkę w kilka sekund.</p>
+			<p class="box__text">Rozpocznij klikając w przycisk.</p>
+
+			<div class="box__row">
+				<label for="telephone">
+					Numer telefonu:
+					<input name="telephone" id="telephone" class="box__input" />
+				</label>
+
+				<label for="code">
+					Kod odbioru:
+					<input name="code" id="code" class="box__input" />
+				</label>
+			</div>
+
+			<button class="box__cta">Odbierz paczkę</button>
+		</section>
+
+		<script src="./assets/js/step0.js"></script>
+		<script src="./assets/js/step1.js"></script>
+	</body>
 </html>

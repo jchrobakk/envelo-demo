@@ -1,0 +1,41 @@
+body {
+	display: flex;
+	min-height: 100vh;
+	justify-content: center;
+	align-items: center;
+	font-family: sans-serif;
+}
+
+.box {
+	display: none;
+	background: lightgray;
+	padding: 120px;
+	text-align: center;
+}
+
+.box--visible {
+	display: block;
+}
+
+.box__title {
+	font-size: 2rem;
+	color: red;
+	text-transform: uppercase;
+}
+
+.box__cta {
+	border: none;
+	font-size: 1.5rem;
+	padding: 10px 20px;
+	background: red;
+}
+
+label {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.box__row {
+	display: flex;
+}
