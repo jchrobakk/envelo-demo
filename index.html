@@ -9,19 +9,19 @@
 		<link rel="stylesheet" href="./assets/css/index.css" />
 	</head>
 	<body>
-		<section class="box box--visible step-0">
+		<section class="box step-0">
 			<h3 class="box__title">Envelo</h3>
 			<p class="box__text">Możesz mieć swoją przesyłkę w kilka sekund.</p>
 			<p class="box__text">Rozpocznij klikając w przycisk.</p>
 			<button class="box__cta">Odbierz paczkę</button>
 		</section>
 
-		<section class="box step-1">
+		<section class="box box--visible step-1">
 			<h3 class="box__title">Envelo</h3>
 			<p class="box__text">Możesz mieć swoją przesyłkę w kilka sekund.</p>
 			<p class="box__text">Rozpocznij klikając w przycisk.</p>
 
-			<div class="box__row">
+			<div class="row">
 				<label for="telephone">
 					Numer telefonu:
 					<input name="telephone" id="telephone" class="box__input" />
@@ -34,9 +34,19 @@
 			</div>
 
 			<button class="box__cta">Odbierz paczkę</button>
-		</section>
+			<div class="overlay"></div>
+			<div class="modal">
+				<h3 class="modal__title">Paczka odebrana</h3>
+				<p class="modal__text">
+					Zrobiłes to w czasie 10 sekund! Czy możemy zrobić dla Ciebie coś
+					jeszcze?
+				</p>
 
-		<script src="./assets/js/step0.js"></script>
-		<script src="./assets/js/step1.js"></script>
+				<div class="row">
+					<button class="modal__cta modal__end">To wszystko na dziś</button>
+					<button class="modal__cta modal__next">Odbierz kolejną paczkę</button>
+				</div>
+			</div>
+		</section>
 	</body>
 </html>
