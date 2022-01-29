@@ -2,9 +2,18 @@ const stepZero = document.querySelector('.step-0');
 const btnZero = stepZero.querySelector('.box__cta');
 const stepOne = document.querySelector('.step-1');
 
-btnZero.addEventListener('click', () => {
+const openStepOne = () => {
 	stepZero.classList.remove('box--visible');
 	stepOne.classList.add('box--visible');
+};
+
+const openStepZero = () => {
+	stepOne.classList.remove('box--visible');
+	stepZero.classList.add('box--visible');
+};
+
+btnZero.addEventListener('click', () => {
+	openStepOne();
 });
 
 const isTelephoneValid = (telephone) => {
@@ -19,6 +28,20 @@ const isCodeValid = (code) => {
 		return true;
 	}
 	return false;
+};
+
+const showModal = () => {
+	const modal = document.querySelector('.modal');
+	modal.classList.add('modal--visible');
+
+	const overlay = document.querySelector('.overlay');
+	overlay.classList.add('overlay--visible');
+};
+
+const closeModal = () => {
+	const modal = document.querySelector('.modal');
+	modal.classList.remove('modal--visible');
+	overlay.classList.remove('overlay--visible');
 };
 
 const form = document.querySelector('form');
@@ -53,4 +76,7 @@ form.addEventListener('change', () => {
 
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
+	showModal();
 });
+
+
