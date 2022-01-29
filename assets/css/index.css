@@ -38,6 +38,15 @@ body {
 	cursor: pointer;
 }
 
+.errors__item {
+	display: none;
+	color: red;
+}
+
+.errors__item--visible {
+	display: block;
+}
+
 label {
 	display: flex;
 	flex-direction: column;

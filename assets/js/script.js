@@ -12,10 +12,21 @@ const telephone = document.querySelector('#telephone');
 const code = document.querySelector('#code');
 
 telephone.addEventListener('change', () => {
-	// check if telephone is number and length is 9
+	const telephoneErrorElement = document.querySelector('.errors__telephone');
 
 	if (isNaN(telephone.value) || telephone.value.length !== 9) {
-		console.log('please enter a valid telephone number');
+		telephoneErrorElement.classList.add('errors__item--visible');
+	} else {
+		telephoneErrorElement.classList.remove('errors__item--visible');
+	}
+});
+
+code.addEventListener('change', () => {
+	const codeErrorElement = document.querySelector('.errors__code');
+	if (isNaN(code.value) || code.value.length !== 4) {
+		codeErrorElement.classList.add('errors__item--visible');
+	} else {
+		codeErrorElement.classList.remove('errors__item--visible');
 	}
 });
 
