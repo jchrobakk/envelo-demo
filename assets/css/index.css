@@ -38,13 +38,12 @@ body {
 	cursor: pointer;
 }
 
-.errors__item {
-	display: none;
-	color: red;
+.box__submit:disabled {
+	cursor: not-allowed;
 }
 
-.errors__item--visible {
-	display: block;
+.errors__item {
+	color: red;
 }
 
 label {
