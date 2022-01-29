@@ -21,19 +21,21 @@
 			<p class="box__text">Możesz mieć swoją przesyłkę w kilka sekund.</p>
 			<p class="box__text">Rozpocznij klikając w przycisk.</p>
 
-			<div class="row">
-				<label for="telephone">
-					Numer telefonu:
-					<input name="telephone" id="telephone" class="box__input" />
-				</label>
+			<form>
+				<div class="row">
+					<label for="telephone">
+						Numer telefonu:
+						<input name="telephone" id="telephone" class="box__input" />
+					</label>
 
-				<label for="code">
-					Kod odbioru:
-					<input name="code" id="code" class="box__input" />
-				</label>
-			</div>
+					<label for="code">
+						Kod odbioru:
+						<input name="code" id="code" class="box__input" />
+					</label>
+				</div>
 
-			<button class="box__cta">Odbierz paczkę</button>
+				<input type="submit" disabled class="box__submit"></>
+			</form>
 			<div class="overlay"></div>
 			<div class="modal">
 				<h3 class="modal__title">Paczka odebrana</h3>
@@ -48,5 +50,6 @@
 				</div>
 			</div>
 		</section>
+		<script src="./assets/js/script.js"></script>
 	</body>
 </html>

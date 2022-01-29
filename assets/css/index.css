@@ -24,11 +24,18 @@ body {
 	text-transform: uppercase;
 }
 
-.box__cta {
+.box__cta,
+.box__submit {
 	border: none;
 	font-size: 1.5rem;
 	padding: 10px 20px;
 	background: red;
+}
+
+.box__submit {
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
 }
 
 label {
