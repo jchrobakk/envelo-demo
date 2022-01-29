@@ -42,6 +42,7 @@ label {
 }
 
 .overlay {
+	display: none;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -49,12 +50,15 @@ label {
 	height: 100%;
 	background: white;
 	opacity: 0.5;
-	display: block;
 	z-index: 1;
 }
 
+.overlay--visible {
+	display: block;
+}
+
 .modal {
-	/* display: none; */
+	display: none;
 	z-index: 2;
 	position: absolute;
 	top: 50%;
