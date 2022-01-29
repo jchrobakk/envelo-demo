@@ -14,7 +14,7 @@ const code = document.querySelector('#code');
 telephone.addEventListener('change', () => {
 	// check if telephone is number and length is 9
 
-	if (!telephone.value.length === 9 || isNaN(telephone.value)) {
+	if (isNaN(telephone.value) || telephone.value.length !== 9) {
 		console.log('please enter a valid telephone number');
 	}
 });
