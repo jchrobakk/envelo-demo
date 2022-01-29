@@ -33,7 +33,6 @@ const isCodeValid = (code) => {
 const showModal = () => {
 	const modal = document.querySelector('.modal');
 	modal.classList.add('modal--visible');
-
 	const overlay = document.querySelector('.overlay');
 	overlay.classList.add('overlay--visible');
 };
@@ -41,7 +40,13 @@ const showModal = () => {
 const closeModal = () => {
 	const modal = document.querySelector('.modal');
 	modal.classList.remove('modal--visible');
+	const overlay = document.querySelector('.overlay');
 	overlay.classList.remove('overlay--visible');
+};
+
+const clearForm = () => {
+	const form = document.querySelector('form');
+	form.reset();
 };
 
 const form = document.querySelector('form');
@@ -76,7 +81,19 @@ form.addEventListener('change', () => {
 
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
+	clearForm();
 	showModal();
 });
 
+const endBtn = document.querySelector('.modal__end');
+const nextBtn = document.querySelector('.modal__next');
 
+endBtn.addEventListener('click', () => {
+	closeModal();
+	openStepZero();
+});
+
+nextBtn.addEventListener('click', () => {
+	closeModal();
+	openStepOne();
+});
